@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Header } from "../../components/Header";
 import { OpenCloseInformation } from "../../components/OpenCloseInformation";
 import { ListCategories } from "../../components/ListCategories";
+import { ListProduts } from "../../components/ListProducts";
 
 import { Container } from "./styles";
 
@@ -23,6 +24,8 @@ export function Home() {
       <OpenCloseInformation />
 
       <ListCategories />
+
+      <ListProduts />
     </Container>
   );
 }

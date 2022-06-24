@@ -24,8 +24,6 @@ export function Profile() {
 
   function handleLogOut() {
     logOut();
-
-    navigation.navigate("SignIn");
   }
 
   return (

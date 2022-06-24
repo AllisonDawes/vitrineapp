@@ -5,6 +5,7 @@ export const Container = styled.View`
   width: 100%;
   height: ${RFValue(100)}px;
   padding: 0 20px;
+  margin-bottom: 20px;
 
   flex-direction: row;
 `;

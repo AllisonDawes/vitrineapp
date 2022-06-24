@@ -14,11 +14,13 @@ export default {
     primary_dark: "#222222",
     primary_transparency: "rgba(0, 0, 0, 0.1)",
     secundary: "#facb00",
+    bg_white: "#d9d9d9",
+
     shape: "#fff",
     text: "#ccc",
     text_dark: "#999",
 
-    container_lodaing: "rgba(0, 0, 0, 0.7)",
+    lodaing: "rgba(0, 0, 0, 0.6)",
 
     success: "#239D3B",
     green: "#00957A",

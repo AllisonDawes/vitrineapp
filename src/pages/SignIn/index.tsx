@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -14,6 +14,7 @@ import { AppStackParamList } from "../../routes/stack.routes";
 
 import { InputForm } from "../../components/InputForm";
 import { Button } from "../../components/Button";
+import { Loading } from "../../components/Loading";
 
 import {
   Container,
@@ -51,6 +52,8 @@ export function SignIn() {
 
   const { signIn } = useAuth();
 
+  const [loading, setLoading] = useState(false);
+
   const {
     control,
     handleSubmit,
@@ -61,6 +64,7 @@ export function SignIn() {
   });
 
   const handleSignIn = useCallback(async (form: DataForm) => {
+    setLoading(true);
     try {
       await signIn({
         email: form.email,
@@ -68,7 +72,10 @@ export function SignIn() {
       });
 
       reset();
+
+      setLoading(false);
     } catch (err) {
+      setLoading(false);
       Alert.alert("Erro ao fazer login. | " + err);
       console.log("Error: " + err);
     }
@@ -119,6 +126,8 @@ export function SignIn() {
           </ButtonForgotPassword>
         </Fields>
       </ContainerForm>
+
+      <Loading active={loading} />
     </Container>
   );
 }
