@@ -67,7 +67,7 @@ export function SignIn() {
         password: form.password,
       });
 
-      //reset();
+      reset();
     } catch (err) {
       Alert.alert("Erro ao fazer login. | " + err);
       console.log("Error: " + err);

@@ -8,6 +8,7 @@ import React, {
 } from "react";
 import { Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+
 import api from "../services/api";
 
 interface AuthProviderProps {
@@ -67,9 +68,6 @@ function AuthProvider({ children }: AuthProviderProps) {
         password,
       });
 
-      console.log({ email, password });
-      console.log(response.data);
-
       const { token, user } = response.data;
 
       await AsyncStorage.setItem("@vitrine:token", token);
@@ -89,16 +87,7 @@ function AuthProvider({ children }: AuthProviderProps) {
   const logOut = useCallback(async () => {
     await AsyncStorage.multiRemove(["@vitrine:token", "@vitrine:user"]);
 
-    setData({
-      token: "",
-      user: {
-        id: "",
-        name: "",
-        email: "",
-        password: "",
-        admin: false,
-      },
-    });
+    setData({} as AuthState);
   }, []);
 
   return (
