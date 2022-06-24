@@ -21,6 +21,7 @@ export default {
     container_lodaing: "rgba(0, 0, 0, 0.7)",
 
     success: "#239D3B",
+    green: "#00957A",
     red: "#F83237",
     red_dark: "#C30409",
     edit: "#FD8E3C",

@@ -44,7 +44,7 @@ export const Welcome = styled.Text`
 
 export const Username = styled.Text`
   font-family: ${({ theme }) => theme.fonts.roboto_slab_medium};
-  color: ${({ theme }) => theme.colors.text_dark};
+  color: ${({ theme }) => theme.colors.text};
   font-size: ${RFValue(14)}px;
 `;
 

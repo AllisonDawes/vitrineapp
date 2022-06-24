@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
 import { Header } from "../../components/Header";
+import { OpenCloseInformation } from "../../components/OpenCloseInformation";
+import { ListCategories } from "../../components/ListCategories";
 
-import { Container, Title } from "./styles";
+import { Container } from "./styles";
 
 export function Home() {
   const [avatar, setAvatar] = useState(
@@ -17,7 +19,10 @@ export function Home() {
         userName="Allison Dawes"
         iconNotification="bell"
       />
-      <Title>Home</Title>
+
+      <OpenCloseInformation />
+
+      <ListCategories />
     </Container>
   );
 }

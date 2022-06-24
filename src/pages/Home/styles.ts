@@ -4,7 +4,3 @@ export const Container = styled.View`
   flex: 1;
   background: ${({ theme }) => theme.colors.primary};
 `;
-
-export const Title = styled.Text`
-  margin-top: 50px;
-`;
